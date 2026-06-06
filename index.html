@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>inMemDB - Embedded in-memory database for Go</title>
+    <meta
+      name="description"
+      content="inMemDB is an open-source embedded in-memory database for Go, powered by Dalgo and used by DataTug."
+    />
+    <meta property="og:title" content="inMemDB" />
+    <meta
+      property="og:description"
+      content="Embedded in-memory database for Go, powered by Dalgo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://inmemdb.github.io/" />
+    <meta name="theme-color" content="#0f766e" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="inMemDB home">
+        <span class="brand-mark" aria-hidden="true">in</span>
+        <span>inMemDB</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#why">Why</a>
+        <a href="#go">Go</a>
+        <a href="#dalgo">Dalgo</a>
+        <a class="nav-button" href="https://github.com/inmemdb/inmemdb-go">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>inMemDB</h1>
+          <p class="lead">Embedded in-memory database for Go.</p>
+          <p class="intro">
+            inMemDB runs inside your Go executable, giving services, CLIs, tests,
+            and local-first tools fast structured storage without a separate
+            database server.
+          </p>
+          <div class="actions" aria-label="Project links">
+            <a class="primary-action" href="https://github.com/inmemdb/inmemdb-go">
+              View on GitHub
+            </a>
+            <a class="secondary-action" href="#go">See the Go shape</a>
+          </div>
+        </div>
+
+        <div class="code-panel" aria-label="Example Go usage">
+          <div class="code-panel-header">
+            <span>embedded.go</span>
+            <span>pure Go</span>
+          </div>
+          <pre><code>package main
+
+import (
+    "context"
+
+    "github.com/inmemdb/inmemdb-go"
+)
+
+func main() {
+    ctx := context.Background()
+
+    db, err := inmemdb.Open(ctx)
+    if err != nil {
+        panic(err)
+    }
+    defer db.Close()
+
+    // Use through the Dalgo database API.
+    _ = db
+}</code></pre>
+        </div>
+      </section>
+
+      <section class="section-grid" id="why" aria-labelledby="why-title">
+        <div>
+          <h2 id="why-title">Why inMemDB</h2>
+          <p>
+            Use inMemDB when your application needs temporary, fast, embedded
+            data storage with a real database-shaped API.
+          </p>
+        </div>
+        <div class="feature-list">
+          <article>
+            <h3>No server process</h3>
+            <p>Ship storage inside your Go binary and keep deployments simple.</p>
+          </article>
+          <article>
+            <h3>Good for tests and tools</h3>
+            <p>Back CLIs, local workflows, fixtures, and ephemeral app state.</p>
+          </article>
+          <article>
+            <h3>Open source first</h3>
+            <p>Developed in public as part of the Dalgo database ecosystem.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="go" aria-labelledby="go-title">
+        <div>
+          <h2 id="go-title">Made to embed into Go executables</h2>
+          <p>
+            inMemDB is implemented in Go and designed to be linked directly into
+            Go applications. It is a library you import, not another service to
+            run.
+          </p>
+        </div>
+        <ul class="check-list">
+          <li>In-process storage for services and command-line tools</li>
+          <li>Simple setup for integration tests and development fixtures</li>
+          <li>API exposed through a Dalgo adapter</li>
+        </ul>
+      </section>
+
+      <section class="split-section muted" id="dalgo" aria-labelledby="dalgo-title">
+        <div>
+          <h2 id="dalgo-title">Powered by Dalgo</h2>
+          <p>
+            The project exists to make the Dalgo adapter model easier to try,
+            embed, and understand. If you can use inMemDB, you can see how Dalgo
+            database implementations fit together.
+          </p>
+        </div>
+        <div class="link-card">
+          <span>Core library</span>
+          <a href="https://github.com/dal-go/dalgo">github.com/dal-go/dalgo</a>
+        </div>
+      </section>
+
+      <section class="section-grid" aria-labelledby="datatug-title">
+        <div>
+          <h2 id="datatug-title">Used by DataTug</h2>
+          <p>
+            DataTug uses inMemDB as an embedded data component and as a practical
+            demonstration of building database adapters with Dalgo.
+          </p>
+        </div>
+        <div class="feature-list two-up">
+          <article>
+            <h3>DataTug</h3>
+            <p>Database tools for teams that work with schemas, data, and change.</p>
+            <a href="https://datatug.io/">datatug.io</a>
+          </article>
+          <article>
+            <h3>inGitDB sibling</h3>
+            <p>A Git-backed database project in the same family of ideas.</p>
+            <a href="https://ingitdb.com/en/">ingitdb.com</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>inMemDB is free and open source.</span>
+      <a href="https://github.com/inmemdb/inmemdb-go">GitHub repository</a>
+    </footer>
+  </body>
+</html>
