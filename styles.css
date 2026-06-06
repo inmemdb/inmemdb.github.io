@@ -259,6 +259,10 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.feature-list.capability-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .feature-list article,
 .link-card {
   padding: 24px;
@@ -359,8 +363,15 @@ h3 {
   }
 
   .feature-list,
-  .feature-list.two-up {
+  .feature-list.two-up,
+  .feature-list.capability-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1120px) {
+  .feature-list.capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

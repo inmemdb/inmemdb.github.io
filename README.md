@@ -7,4 +7,4 @@ then push to the default branch of `github.com/inmemdb/inmemdb.github.io`.
 
 The inMemDB Go implementation is expected to live at
 `github.com/inmemdb/inmemdb-go` and use Apache-2.0 unless the project chooses
-to match a different upstream Dalgo license.
+to match a different upstream DALgo license.

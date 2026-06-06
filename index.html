@@ -26,9 +26,10 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#why">Why</a>
+        <a href="#features">Features</a>
         <a href="#go">Go</a>
         <a href="#server">Server</a>
-        <a href="#dalgo">Dalgo</a>
+        <a href="#dalgo">DALgo</a>
         <a class="nav-button" href="https://github.com/inmemdb">GitHub</a>
       </nav>
     </header>
@@ -78,7 +79,7 @@ func main() {
     }
     defer db.Close()
 
-    // Use through the Dalgo database API.
+    // Use through the DALgo database API.
     _ = db
 }
 
@@ -108,7 +109,52 @@ inmemdb serve</code></pre>
           </article>
           <article>
             <h3>Open source first</h3>
-            <p>Developed in public as part of the Dalgo database ecosystem.</p>
+            <p>Developed in public as part of the DALgo database ecosystem.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-grid" id="features" aria-labelledby="features-title">
+        <div>
+          <h2 id="features-title">Core capabilities</h2>
+          <p>
+            inMemDB is designed as a practical database engine, not just a
+            key-value cache. It combines familiar relational concepts with
+            document-style collection layouts.
+          </p>
+        </div>
+        <div class="feature-list capability-grid">
+          <article>
+            <h3>Row-oriented and columnar storage</h3>
+            <p>Choose storage layouts that fit transactional and analytical access patterns.</p>
+          </article>
+          <article>
+            <h3>B-tree indexes</h3>
+            <p>Use ordered indexes for lookups, ranges, sorting, and predictable scans.</p>
+          </article>
+          <article>
+            <h3>Bitmap indexes</h3>
+            <p>Accelerate selective filters and set-oriented query operations.</p>
+          </article>
+          <article>
+            <h3>Persistence to disk</h3>
+            <p>Keep the in-memory model while supporting durable local state.</p>
+          </article>
+          <article>
+            <h3>Flat collections</h3>
+            <p>Model table-like datasets with familiar relational structure.</p>
+          </article>
+          <article>
+            <h3>Hierarchical collections</h3>
+            <p>Represent nested application data in a Firestore-like shape.</p>
+          </article>
+          <article>
+            <h3>SQL and GraphQL</h3>
+            <p>Query data through standard SQL and GraphQL interfaces.</p>
+          </article>
+          <article>
+            <h3>Transactions</h3>
+            <p>Group changes into reliable units of work for application logic.</p>
           </article>
         </div>
       </section>
@@ -125,7 +171,7 @@ inmemdb serve</code></pre>
         <ul class="check-list">
           <li>In-process storage for services and command-line tools</li>
           <li>Simple setup for integration tests and development fixtures</li>
-          <li>API exposed through a Dalgo adapter</li>
+          <li>API exposed through a DALgo adapter</li>
         </ul>
       </section>
 
@@ -148,10 +194,10 @@ inmemdb serve</code></pre>
 
       <section class="split-section muted" id="dalgo" aria-labelledby="dalgo-title">
         <div>
-          <h2 id="dalgo-title">Powered by Dalgo</h2>
+          <h2 id="dalgo-title">Powered by DALgo</h2>
           <p>
-            The project exists to make the Dalgo adapter model easier to try,
-            embed, and understand. If you can use inMemDB, you can see how Dalgo
+            The project exists to make the DALgo adapter model easier to try,
+            embed, and understand. If you can use inMemDB, you can see how DALgo
             database implementations fit together.
           </p>
         </div>
@@ -167,7 +213,7 @@ inmemdb serve</code></pre>
           <p>
             DataTug uses inMemDB as a data component and as a practical
             demonstration of building database adapters and runnable database
-            tooling with Dalgo.
+            tooling with DALgo.
           </p>
         </div>
         <div class="feature-list two-up">
