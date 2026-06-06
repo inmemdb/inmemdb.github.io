@@ -194,6 +194,7 @@ section p {
 }
 
 pre {
+  max-height: 580px;
   margin: 0;
   padding: clamp(18px, 3vw, 28px);
   overflow: auto;
